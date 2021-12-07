@@ -1,5 +1,5 @@
 package main
-import ("fmt";"net";"io";"strings";"time")
+import ("fmt";"net";"io";"strings";)
 //这是一个用来处理连接进来的用户的函数
 func handleconn(conn net.Conn)  {
     defer conn.Close()
@@ -40,7 +40,7 @@ func main() {
         // //每一个连接进来的用户都为其分配一个专属的go进程
         go handleconn(conn)
         // conn.Printf()
-        time.Sleep(time.Second)
-        fmt.Println("stile alive...\n")
+        // time.Sleep(time.Second)
+        // fmt.Println("stile alive...\n")
     }
 }
