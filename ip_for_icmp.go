@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-    a := flag.String("p", "ip4:ip", "protocol")
-    b := flag.String("l", "0.0.0.0", "listen ip")
+    a := flag.String("p", "ip4:icmp", "protocol")
+    b := flag.String("l", "127.0.0.1", "listen ip")
     flag.Parse()
     laddr, err := net.ResolveIPAddr(*a, *b)
     if err != nil {
