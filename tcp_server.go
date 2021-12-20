@@ -5,7 +5,7 @@ func handleconn(conn net.Conn)  {
     defer conn.Close()
     buf:=make([]byte,1024)
     //给客户端发送连接成功的信号
-    conn.Write([]byte("welcome to my server\n"))
+    // conn.Write([]byte("welcome to my server\n"))
     for  {
     //持续读取客户端数据，保存在buf缓冲区中，并处理
         n,err:=conn.Read(buf)
