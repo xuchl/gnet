@@ -2,3 +2,5 @@
 lib/
 backup/
 bin/
+.DS_Store
+video_cap

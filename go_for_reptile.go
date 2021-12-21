@@ -32,7 +32,7 @@ func main() {
     // url := "https://a01-g-naver-vod.pstatic.net/navertv/c/read/v2/VOD_ALPHA/navertv_2020_06_12_1974/hls/dbf0065b-ac6b-11ea-9071-246e963a41ed-000011.ts?__gda__=1639723479_6e7f8a9c7dff8ac2ce29fce6c00ff6b0"
 	// url := "https://tv.naver.com/v/14139840"
 	// url := "https://a01-g-naver-vod.pstatic.net/navertv/c/read/v2/VOD_ALPHA/navertv_2020_07_13_1445/hls/eec4c02d-c4ce-11ea-8c09-246e963a41ed-000000.ts?__gda__=1639749036_5ad700aa8a7e86cc75039f6ee07df4d8"
-	url := "https://a01-g-naver-vod.pstatic.net/navertv/c/read/v2/VOD_ALPHA/navertv_2020_07_13_1445/hls/e304c938-c4ce-11ea-8c09-246e963a41ed-000002.ts?__gda__=1639749036_5ad700aa8a7e86cc75039f6ee07df4d8"
+	url := "https://a01-g-naver-vod.pstatic.net/navertv/c/read/v2/VOD_ALPHA/navertv_2020_06_05_1693/hls/daa05d6c-a6dc-11ea-9825-246e96398ca5-000003.ts?__gda__=1640061354_39d569f024a1441ebed094432f2fb8e3"
 	resp, err := client.Get(url)
 	if err != nil {
 		fmt.Println("Get error:", err)
@@ -40,6 +40,6 @@ func main() {
 	}
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-	ioutil.WriteFile("./e304c938-c4ce-11ea-8c09-246e963a41ed-000002.ts", body, 0777)
+	ioutil.WriteFile("./daa05d6c-a6dc-11ea-9825-246e96398ca5-000003.ts", body, 0777)
 	fmt.Println(string(body))
 }

@@ -1,7 +1,8 @@
 import cv2
 
 if __name__ == "__main__":
-    video_name = "e304c938-c4ce-11ea-8c09-246e963a41ed-000002.ts"
+    # video_name = "e304c938-c4ce-11ea-8c09-246e963a41ed-000002.ts"
+    video_name = "daa05d6c-a6dc-11ea-9825-246e96398ca5-000003.ts"
     vc = cv2.VideoCapture(video_name)  # 读入视频文件
     video_len = int(vc.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
     video_width = int(vc.get(cv2.CAP_PROP_FRAME_WIDTH))  # 视频宽度
