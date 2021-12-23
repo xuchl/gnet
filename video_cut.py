@@ -1,6 +1,6 @@
 import cv2
  
-capture=cv2.VideoCapture('./daa05d6c-a6dc-11ea-9825-246e96398ca5-000003.ts')  
+capture=cv2.VideoCapture('./decrypted.ts')  
 print(capture.isOpened())
 num=0
 while True: 
