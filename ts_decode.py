@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
 # import os
 
 key=bytes(b'0871be8fcdc9fef8')
@@ -7,8 +8,8 @@ key=bytes(b'0871be8fcdc9fef8')
 # key=kf.read().encode()
 # key=
 aes=AES.new(key,AES.MODE_CBC)
-fpath="./Jyk2ofRV.ts"
-output=open("decrypted.ts",'wb+')
+fpath="./video/Jyk2ofRV.ts"
+output=open("./video/decrypted.ts",'wb+')
 
 
 # def readSize(path,size):
@@ -30,6 +31,6 @@ output=open("decrypted.ts",'wb+')
 #     output.write(content)
 f=open(fpath,"rb")
 i=f.read()
-content=aes.decrypt(i)
+content=unpad(aes.decrypt(i),16,'pkcs7')
 output.write(content)
 output.close();
