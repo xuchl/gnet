@@ -28,7 +28,7 @@ func main() {
 		//TLSClientConfig: &tls.Config{InsecureSkipVerify: true}, //InsecureSkipVerify用来控制客户端是否证书和服务器主机名。如果设置为true,//		//则不会校验证书以及证书中的主机名和服务器主机名是否一致。		
 	}
 	client := &http.Client{Transport: tr}
-	resp, err := client.Get("https://www.iot.com")
+	resp, err := client.Get("https://www.mymqtt.com:8883")
 	if err != nil {
 		fmt.Println("Get error:", err)
 		return
